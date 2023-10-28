@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
+        android:backgroundTint="#fefadd"
         tools:context=".unpackedScannerActivity">
 
         <TextView
@@ -31,6 +32,7 @@
             android:layout_width="283dp"
             android:layout_height="289dp"
             android:background="@drawable/border"
+            android:src="@drawable/food_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,12 +43,15 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
+            android:layout_marginBottom="33dp"
             android:text="Detected Item :"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView14"
-            app:layout_constraintEnd_toEndOf="@+id/textView14"
-            app:layout_constraintTop_toBottomOf="@+id/imgViu" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
+            app:layout_constraintTop_toBottomOf="@+id/imgViu"
+            app:layout_constraintVertical_bias="0.958"
+            tools:layout_editor_absoluteX="49dp" />
 
         <TextView
             android:id="@+id/naam"
@@ -55,6 +60,7 @@
             android:hint="result"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.753"
             app:layout_constraintStart_toEndOf="@+id/textView9"
             app:layout_constraintTop_toTopOf="@+id/textView9" />
 
@@ -62,25 +68,25 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="36dp"
             android:text="Can cause :"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView13"
-            app:layout_constraintEnd_toEndOf="@+id/textView13"
-            app:layout_constraintTop_toBottomOf="@+id/avoidTV" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView13"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginBottom="240dp"
             android:text="Common allergens :"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/cameraBtn"
-            app:layout_constraintTop_toBottomOf="@+id/diseaseTV"
-            tools:layout_editor_absoluteX="28dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/allergenTV"
@@ -90,6 +96,7 @@
             android:textColor="@color/black"
             app:layout_constraintBottom_toTopOf="@+id/cameraBtn"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toEndOf="@+id/textView13"
             app:layout_constraintTop_toTopOf="@+id/textView13"
             app:layout_constraintVertical_bias="0.0" />
@@ -101,6 +108,7 @@
             android:hint="result"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.82"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
 
@@ -108,22 +116,21 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="34dp"
             android:text="Avoid if :"
             android:textColor="@color/black"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView10"
-            app:layout_constraintEnd_toEndOf="@+id/textView10"
-            app:layout_constraintStart_toStartOf="@+id/textView10"
-            app:layout_constraintTop_toBottomOf="@+id/naam"
-            tools:ignore="HardcodedText" />
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            tools:ignore="HardcodedText"
+            tools:layout_editor_absoluteX="49dp" />
 
         <TextView
             android:id="@+id/avoidTV"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
             android:hint="result"
             android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/textView14"
             app:layout_constraintTop_toTopOf="@+id/textView14" />
 
@@ -131,17 +138,20 @@
             android:id="@+id/cameraBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:backgroundTint="#465D0A"
             android:text="Open Camera"
             android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/imgbtn"
             app:layout_constraintEnd_toEndOf="@+id/imgbtn"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/imgbtn" />
 
         <Button
             android:id="@+id/imgbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
             android:backgroundTint="#465D0A"
             android:text="Open Gallery"
             android:textColor="@color/white"
@@ -154,6 +164,7 @@
             android:id="@+id/mlbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
             android:backgroundTint="#465D0A"
             android:text="Fetch Results"
             android:textColor="@color/white"
